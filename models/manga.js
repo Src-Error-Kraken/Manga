@@ -1,8 +1,8 @@
 const mangaDb = require('../config/connection');
 
 
-function getAll(id) {
-  return mangaDb.any(`SELECT * FROM collection WHERE user_id = $1, id`);
+function getAll() {
+  return mangaDb.any(`SELECT * FROM collection`);
 }
 
 function getOne(id) {
@@ -21,7 +21,7 @@ function create(manga) {
 }
 
 function destroy(id) {
-  return queryPromise = mangaDb.non(`
+  return queryPromise = mangaDb.none(`
     DELETE FROM collection WHERE manga_id = $1
   `, id);
 }

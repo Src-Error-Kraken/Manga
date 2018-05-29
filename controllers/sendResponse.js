@@ -7,9 +7,9 @@ function sendOkResp(req, res) {
 }
 
 function sendErrResp(err, req, res, next) {
-    console.log(err);
+    console.log('HIHIHIIIHIHI',err);
     res.json({
-        status: 'err',
+        status: 'erroneus',
         msg: err.message
     });
 }
