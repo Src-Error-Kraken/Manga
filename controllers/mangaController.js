@@ -13,9 +13,8 @@ function getAll(req, res, next) {
 function create(req, res, next) {
   mangaDb.create(req.body)
          .then(data => {
-               .then(data {
-                     res.locals.manga = data;
-                     next();
+                    res.locals.manga = data;
+                    next();
                })
                .catch(next);
 }
@@ -26,4 +25,11 @@ function destroy(req, res, next) {
               next()
          })
          .catch(next);
+}
+
+
+module.exports = {
+  getAll,
+  create,
+  destroy
 }

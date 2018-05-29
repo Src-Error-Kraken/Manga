@@ -2,7 +2,7 @@
   "name": "manga",
   "version": "1.0.0",
   "description": "APP DESCRIPTION   A manga app that will allow the users to search through and the app and read their favorite mangas. They can also save       books of interest for later.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",

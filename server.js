@@ -1,6 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const mangaRouter = require('./routes/mangaRoute');
 
 const app = express();

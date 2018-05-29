@@ -1,3 +1,5 @@
+\c mangaDb;
+
 DROP TABLE IF EXISTS collection;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS posts;
@@ -6,7 +8,7 @@ DROP TABLE IF EXISTS posts;
       id SERIAL PRIMARY KEY,
     username VARCHAR(255),
     email VARCHAR(255) UNIQUE NOT NULL,
-    pw_digest VARCHAR
+    pw_digest VARCHAR(255)
 );
 
   CREATE TABLE collection(
@@ -19,7 +21,7 @@ DROP TABLE IF EXISTS posts;
 
   CREATE TABLE posts(
     id SERIAL PRIMARY KEY,
-    review TEXT,
+    post TEXT,
     manga_name VARCHAR,
     user_name VARCHAR,
     user_id INT REFERENCES users(id)

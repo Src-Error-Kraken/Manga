@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const mangaController = require('../controller/mangaController');
-const sendResponse = require('../controller/sendResponse');
+const mangaController = require('../controllers/mangaController');
+const sendResponse = require('../controllers/sendResponse');
 
 router.route('/')
   .get(mangaController.getAll, sendResponse.sendOkResp, sendResponse.sendErrResp)
@@ -9,3 +9,7 @@ router.route('/')
 router.route('/:id')
   .get(mangaController.getAll, sendResponse.sendOkResp, sendResponse.sendErrResp)
   .delete(mangaController.destroy, sendResponse.sendOkResp, sendResponse.sendErrResp)
+
+
+
+module.exports = router;
