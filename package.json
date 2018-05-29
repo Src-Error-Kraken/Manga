@@ -1,0 +1,32 @@
+{
+  "name": "manga",
+  "version": "1.0.0",
+  "description": "APP DESCRIPTION   A manga app that will allow the users to search through and the app and read their favorite mangas. They can also save       books of interest for later.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "reset-db": "psql manga_db -f db/schema.sql",
+    "start-server": "nodemon server.js",
+    "start-client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Src-Error-Kraken/Manga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Src-Error-Kraken/Manga/issues"
+  },
+  "homepage": "https://github.com/Src-Error-Kraken/Manga#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "node": "^10.2.0",
+    "nodemon": "^1.17.5",
+    "pg-promise": "^8.4.4"
+  }
+}
