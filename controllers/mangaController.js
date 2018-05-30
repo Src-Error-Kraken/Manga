@@ -3,7 +3,7 @@ const mangaDb = require('../models/manga');
 function getAll(req, res, next) {
   mangaDb.getAll(req.params.id)
          .then(data => {
-            console.log(req.params.id,'controller')
+            console.log(req.params.id,'controllers')
 
                res.locals.mangas = data;
                next();

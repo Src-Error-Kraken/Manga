@@ -35,7 +35,7 @@ class App extends Component {
         <Switch>
           <Route path='/manga_details/:id' component={(props)=>(MangaDetails
             id = {props.match.params.id} addToCollection = {this.addToCollection.bind(this)}/>)} />
-          // <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Home} />
         </Switch>
 
       </div>

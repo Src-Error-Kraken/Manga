@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Src-Error-Kraken/Manga#readme",
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
