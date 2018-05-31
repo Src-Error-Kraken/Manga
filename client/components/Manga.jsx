@@ -16,3 +16,40 @@ class Manga extends Component{
        }
         this.link = '/manga_details/'
     }
+
+
+  fetchManga() {
+       fetch(
+
+       )
+
+       .then(resp => {
+            if (!resp.ok) {
+               throw Error ('oppsies: ' resp.message);
+            }
+            return resp.json();
+            })
+            .then(manga => {
+
+                this.setState({
+
+                })
+            })
+            .catch(err => console.log(`There\'s an error: ${err}`));
+       }
+       componentDidMount(){
+          this.fetchManga()
+       }
+
+       render(){
+          return(
+            <div className="manga">
+              <Link to={this.link + this.state.i}>
+                  <img className="manga_img" src={this.state} />
+              </Link>
+
+              <p className="anime_title">{this.state}</p>
+          )
+       }
+
+  }

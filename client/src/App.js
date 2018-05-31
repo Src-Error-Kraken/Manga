@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Home from '../components/Home';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
 class App extends Component {
@@ -35,9 +36,14 @@ class App extends Component {
         <Switch>
           <Route path='/manga_details/:id' component={(props)=>(MangaDetails
             id = {props.match.params.id} addToCollection = {this.addToCollection.bind(this)}/>)} />
+          <Route path='/search/:manga' component={(props)=>(
+            <SearchResults manga = {props.match.params.manga} />
+          )} />
+          <Route path='/register_login' component={RegisterLogin} />
+          <Route path='/collection' component={Collection} />
           <Route exact path='/' component={Home} />
         </Switch>
-
+          <Footer />
       </div>
     );
   }

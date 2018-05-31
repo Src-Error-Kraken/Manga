@@ -21,7 +21,7 @@ function createPost(post) {
 }
 
 function updatePost(post) {
-  return qp = mangaDb.any(`UPDATE reviews SET post = $/post/ WHERE manga_id = $/manga_id/ AND user_id = $/user_id/
+  return qp = mangaDb.any(`UPDATE posts SET post = $/post/ WHERE manga_id = $/manga_id/ AND user_id = $/user_id/
     RETURNING *`, post);
 }
 
