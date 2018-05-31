@@ -2,6 +2,8 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mangaRouter = require('./routes/mangaRoute');
+const regisRouter = require('./routes/registerRoute');
+const postsRouter = require('./routes/postsRoute');
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -15,6 +17,8 @@ if(process.env.NODE_ENV === 'production'){
 
 app.use('/mangas', mangaRouter);
 // app.use('/manga', mangaRouter);
+app.use('/api', regisRouter);
+app.use('/posts', postsRouter);
 
 
 

@@ -18,14 +18,14 @@ function restrict(req, res, next) {
         })
         .catch(err => res.status(401).json({
             status: 'Error',
-            message: 'Invalid credentials'
+            message: 'nope that\'s not it'
         }))
 }
 
 function register(req, res) {
     userModel.register(req.body)
         .catch(err => res.status(401).json({
-            message: 'Username taken'
+            message: 'sorry username taken'
         }))
         .then(data => tokenService.makeToken({
             email: data.email,

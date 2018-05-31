@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\"",
-    "reset-db": "psql manga_db -f db/schema.sql",
+    "reset-db": "psql mangaDb -f db/schema.sql",
     "start-server": "nodemon server.js",
     "start-client": "cd client && npm start"
   },
@@ -25,6 +25,7 @@
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
     "morgan": "^1.9.0",
     "node": "^10.2.0",
     "nodemon": "^1.17.5",
