@@ -1,4 +1,4 @@
--- \c mangaDb;
+\c mangaDb;
 
 INSERT INTO users
 (username, email, pw_digest)
