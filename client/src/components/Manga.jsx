@@ -19,7 +19,7 @@ class Manga extends Component{
 
 
   fetchManga() {
-       fetch(
+       fetch(`https://www.mangaeden.com/api/manga/[manga.id]/=${this.i}`
 
        )
 
